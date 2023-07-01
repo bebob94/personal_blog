@@ -95,15 +95,17 @@ const MySkills = () => {
             I constantly strive to improve my skills, keeping up with the latest
             industry trends.
           </p>
-          <a
-            className="bg-gradient-rainblue text-deep-blue rounded-full   font-semibold
+          <div className="flex justify-center items-center">
+            <a
+              className="bg-gradient-rainblue text-deep-blue rounded-full   font-semibold
               hover:bg-blue hover:text-white transition duration-500"
-            href="../../public/Alberto_Macis_-_Junior_Web_Developer_Fullstack (19).pdf"
-            download
-          >
-            {" "}
-            {" -> Curriculum <- "}{" "}
-          </a>
+              href="../../public/Alberto_Macis_-_Junior_Web_Developer_Fullstack (19).pdf"
+              download
+            >
+              {" "}
+              {" -> Curriculum <- "}{" "}
+            </a>
+          </div>
         </motion.div>
 
         {/* Experience */}
@@ -130,19 +132,21 @@ const MySkills = () => {
           <p className="mt-5 mb-2">
             On June 2023 i completed an intensive 950-hour course with Epicode
             Italia 👨🏻‍💻, where I learned to develop front-end and back-end web
-            applications and use the latest technologies.📲 I have had the
-            opportunity to work on multiple projects that have allowed me to
-            apply the skills I have acquired in a real development
-            environment.💼
+            applications and use the latest technologies.📲
+            <br /> I have had the opportunity to work on multiple projects that
+            have allowed me to apply the skills I have acquired in a real
+            development environment.💼
           </p>
-          <a
-            className="bg-gradient-rainblue text-deep-blue rounded-full font-semibold
+          <div className="flex justify-center items-center">
+            <a
+              className="bg-gradient-rainblue text-deep-blue rounded-full font-semibold
               hover:bg-blue hover:text-white transition duration-500"
-            href="https://benchmark.epicode.com/credentials/64872a2fcaff90a796586293"
-          >
-            {" "}
-            {" -> Certificate <- "}{" "}
-          </a>
+              href="https://benchmark.epicode.com/credentials/64872a2fcaff90a796586293"
+            >
+              {" "}
+              {" -> Certificate <- "}{" "}
+            </a>
+          </div>
         </motion.div>
         {/* HOBBIES */}
         <motion.div
@@ -173,14 +177,16 @@ const MySkills = () => {
             leadership skills, a strategic vision, and the ability to motivate
             others to give their best.🥋
           </p>
-          <a
-            className="bg-gradient-rainblue text-deep-blue rounded-full font-semibold
+          <div className="flex justify-center items-center">
+            <a
+              className="bg-gradient-rainblue text-deep-blue rounded-full font-semibold 
               hover:bg-blue hover:text-white transition duration-500"
-            href=" https://www.instagram.com/p/BzX4sfGICI1/"
-          >
-            {" "}
-            {" -> photo <- "}{" "}
-          </a>
+              href=" https://www.instagram.com/p/BzX4sfGICI1/"
+            >
+              {" "}
+              {" -> Photo <- "}{" "}
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

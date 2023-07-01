@@ -16,7 +16,7 @@ const projectVariant = {
 };
 
 const Project = ({ title, description }) => {
-  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90  transition duration-500 
+  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-95  transition duration-500 
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
@@ -29,7 +29,7 @@ const Project = ({ title, description }) => {
       <img
         src={`../assets/${projectTitle}.png`}
         alt={projectTitle}
-        className="border-white border-2"
+        className="border-white border-2  w-[420px] max-h-[400px]"
       />
     </motion.div>
   );
@@ -40,30 +40,38 @@ const Projects = () => {
     {
       title: "M.V.S.sport",
       description: `Sito sportivo che permette di prenotare campi ed aggiungersi a prenotazioni di altri utenti.  Progetto creato in java e react Typescript.`,
+      link: "https://github.com/bebob94/MVS_Sports",
     },
     {
       title: "Linkedin Clone",
       description: `Clone del noto sito Linkedin con tutte le sezioni home, profilo, ricerca lavoro e la possibilità di inserire post, commenti e like.  Progetto frontend creato con react typescript.`,
+      link: "https://github.com/lucaf1990/Linkedin",
     },
     {
       title: "Spotify Clone",
       description: `Clone del noto sito Spotify con la possibilità di ricercare le canzoni per genere autore o titolo e salvarle nei preferiti. Progetto frontend creato con Javascript.`,
+      link: "https://github.com/lucaf1990/SPOTIFY-BuildWeek",
     },
     {
       title: "Netflix Clone",
       description: `Clone del noto sito Netflix, con la possibilità di ricercare i film per autore e titolo. Primo progetto frontend creato con React.`,
+      link: "https://github.com/bebob94/Netflix-Clone",
     },
     {
       title: "App Meteo",
       description: `Applicazione meteo che permette di vedere le condizioni atmosferiche della località che si preferisce. Progetto frontend creato con React.`,
+      link: "https://github.com/bebob94/app-Meteo",
     },
     {
       title: "Epicode clone",
       description: `Clone del sito Epicode, in cui si può svolgere un quiz a risposta multipla, con la possibilità di vedere i risultati.  Primo progetto svolto interamente in javascrpt.`,
+      link: "",
     },
     {
       title: "GitHub",
       description: "Statistiche Giugno 2023 GitHub",
+
+      link: "https://github.com/bebob94",
     },
   ];
   return (
