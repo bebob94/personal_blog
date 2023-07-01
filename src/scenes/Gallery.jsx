@@ -4,12 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import image from "../assets/person-1.jpeg";
-import image1 from "../assets/person-2.jpeg";
-import image2 from "../assets/person-3.jpeg";
+import image from "../assets/redux.png";
+import image1 from "../assets/eclipse.png";
+import image2 from "../assets/login&register.png";
+import image3 from "../assets/postgreSql.png";
+import image4 from "../assets/react-Typescript.png";
 
 const Gallery = () => {
-  const slides = [image, image1, image2];
+  const slides = [image, image1, image2, image3, image4];
 
   return (
     <section id="gallery" className="pt-32 pb-16">
@@ -60,7 +62,7 @@ const Gallery = () => {
             <img
               src={slide}
               alt={`Person ${index + 1}`}
-              className="rounded-3xl h-80 w-80"
+              className="rounded-3xl h-100 w-100"
             />
           </SwiperSlide>
         ))}

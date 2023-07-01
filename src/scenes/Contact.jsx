@@ -36,7 +36,7 @@ const Contact = () => {
             <span className="text-yellow">CONTACT ME</span> TO GET STARTED
           </p>
           <div className="flex md:justify-end my-5">
-            <LineGradient width="w-1/2" />
+            <LineGradient width="w-3/5" />
           </div>
         </div>
       </motion.div>
@@ -54,7 +54,11 @@ const Contact = () => {
           }}
           className="basis-1/2 flex justify-center"
         >
-          <img src="../assets/contact-image.jpeg" alt="contact" />
+          <img
+            src="../assets/contact-image.jpeg"
+            alt="contact"
+            className="rounded-3xl"
+          />
         </motion.div>
 
         <motion.div

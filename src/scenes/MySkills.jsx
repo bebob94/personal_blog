@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="about" className="pt-10 pb-24">
+    <section id="about" className="pt-20 pb-24">
       {/* HEADER AND IMAGE SECTION */}
       <div className="md:flex md:justify-between md:gap-16 mt-24">
         <motion.div
@@ -99,7 +99,7 @@ const MySkills = () => {
             <a
               className="bg-gradient-rainblue text-deep-blue rounded-full px-3 py-1 mt-1 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
-              href="../../public/Alberto_Macis_-_Junior_Web_Developer_Fullstack (19).pdf"
+              href="../assets/Alberto_Macis_-_Junior_Web_Developer_Fullstack (19).pdf"
               download
             >
               {" "}
