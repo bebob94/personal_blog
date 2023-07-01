@@ -15,7 +15,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title }) => {
+const Project = ({ title, description }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -24,25 +24,52 @@ const Project = ({ title }) => {
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt.
-        </p>
+        <p className="mt-7">{description}</p>
       </div>
-      <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
+      <img src={`../assets/${projectTitle}.png`} alt={projectTitle} />
     </motion.div>
   );
 };
 
 const Projects = () => {
+  const projectData = [
+    {
+      title: "M.V.S.sport",
+      description: "Descrizione del progetto M.V.S.sport",
+    },
+    {
+      title: "Linkedin Clone",
+      description: "Descrizione del progetto Linkedin Clone",
+    },
+    {
+      title: "Spotify Clone",
+      description: "Descrizione del progetto Spotify Clone",
+    },
+    {
+      title: "Netflix Clone",
+      description: "Descrizione del progetto Netflix Clone",
+    },
+    {
+      title: "App Meteo",
+      description: "Descrizione del progetto App Meteo",
+    },
+    {
+      title: "Epicode clone",
+      description: "Descrizione del progetto Epicode clone",
+    },
+    {
+      title: "GitHub",
+      description: "Descrizione del progetto GitHub",
+    },
+  ];
   return (
-    <section id="projects" className="pt-48 pb-48">
+    <section id="projects" className="pt-32 pb-48">
       {/* HEADINGS */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ root: true, amount: 0.5 }}
         transition={{ duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, y: -50 },
@@ -57,10 +84,13 @@ const Projects = () => {
             <LineGradient width="w-2/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">
-          Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-          fames odio in at. At magna ornare dictum lectus. Purus massa morbi
-          purus nec eget eleifend ut elit.
+        <p className="mt-6 mb-10">
+          In the "Projects" section of my blog, I share a variety of projects
+          that I have created and developed. This section offers you an
+          opportunity to explore my creations, experiments, and passions in the
+          field of web development. You will be able to get an idea of my skills
+          and experiences, and I hope they can inspire you for your future
+          projects.
         </p>
       </motion.div>
 
@@ -71,26 +101,25 @@ const Projects = () => {
           variants={container}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ root: true, amount: 0.2 }}
         >
           {/* ROW 1 */}
           <div
             className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+              max-w-[420px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
             BEAUTIFUL USER INTERFACES
           </div>
-          <Project title="Project 1" />
-          <Project title="Project 2" />
 
-          {/* ROW 2 */}
-          <Project title="Project 3" />
-          <Project title="Project 4" />
-          <Project title="Project 5" />
-
+          {projectData.map((project) => (
+            <Project
+              key={project.title}
+              title={project.title}
+              description={project.description}
+            />
+          ))}
           {/* ROW 3 */}
-          <Project title="Project 6" />
-          <Project title="Project 7" />
+
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"

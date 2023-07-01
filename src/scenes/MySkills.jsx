@@ -65,7 +65,7 @@ const MySkills = () => {
       </div>
 
       {/* SKILLS */}
-      <div className="md:flex md:justify-between mt-8 gap-32">
+      <div className="md:flex md:justify-between mt-6 gap-32">
         {/* Description */}
         <motion.div
           className="md:w-1/3 mt-20"
@@ -87,20 +87,23 @@ const MySkills = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5 ">
+          <p className="mt-5 mb-2">
             Hello everyone!🙋🏻‍♂️ My name is Alberto Macis, i am a young man with
             extensive experience in various sales-related fields🤝🏻, customer
-            relationship management, and direct customer assistance🆘. <br />
-            <a
-              className="bg-gradient-rainblue text-deep-blue rounded-full   font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
-              href="../../public/Alberto_Macis_-_Junior_Web_Developer_Fullstack (19).pdf"
-              download
-            >
-              {" "}
-              {" -> Curriculum <- "}{" "}
-            </a>
+            relationship management, and direct customer assistance🆘.
+            Currently, I am expanding my skills in FullStack Web Development.👨🏻‍💻
+            I constantly strive to improve my skills, keeping up with the latest
+            industry trends.
           </p>
+          <a
+            className="bg-gradient-rainblue text-deep-blue rounded-full   font-semibold
+              hover:bg-blue hover:text-white transition duration-500"
+            href="../../public/Alberto_Macis_-_Junior_Web_Developer_Fullstack (19).pdf"
+            download
+          >
+            {" "}
+            {" -> Curriculum <- "}{" "}
+          </a>
         </motion.div>
 
         {/* Experience */}
@@ -124,21 +127,24 @@ const MySkills = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
+          <p className="mt-5 mb-2">
             On June 2023 i completed an intensive 950-hour course with Epicode
             Italia 👨🏻‍💻, where I learned to develop front-end and back-end web
-            applications and use the latest technologies📲. <br />
-            <a
-              className="bg-gradient-rainblue text-deep-blue rounded-full  font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
-              href="https://benchmark.epicode.com/credentials/64872a2fcaff90a796586293"
-            >
-              {" "}
-              {" -> Certificate <- "}{" "}
-            </a>
+            applications and use the latest technologies.📲 I have had the
+            opportunity to work on multiple projects that have allowed me to
+            apply the skills I have acquired in a real development
+            environment.💼
           </p>
+          <a
+            className="bg-gradient-rainblue text-deep-blue rounded-full font-semibold
+              hover:bg-blue hover:text-white transition duration-500"
+            href="https://benchmark.epicode.com/credentials/64872a2fcaff90a796586293"
+          >
+            {" "}
+            {" -> Certificate <- "}{" "}
+          </a>
         </motion.div>
-        {/* IMAGINATIVE */}
+        {/* HOBBIES */}
         <motion.div
           className="md:w-1/3 mt-20"
           initial="hidden"
@@ -154,17 +160,27 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">03</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Imaginative
+                Hobbies
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-violet-900 absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
-            Accumsan eu fringilla nisi, eget. Vitae, eget ut id proin arcu in
-            curabitur. Lectus libero, egestas enim aliquam quis felis amet.
-            Sagittis, amet netus fringilla netus lobortis odio sed platea.
-            Bibendum.
+          <p className="mt-5 mb-2">
+            My involvement in professional football⚽ has taught me the
+            importance of a united team focused on a common goal. I have learned
+            that open communication, mutual trust, and determination are
+            essential for collective success.🎯 As a captain, I have developed
+            leadership skills, a strategic vision, and the ability to motivate
+            others to give their best.🥋
           </p>
+          <a
+            className="bg-gradient-rainblue text-deep-blue rounded-full font-semibold
+              hover:bg-blue hover:text-white transition duration-500"
+            href=" https://www.instagram.com/p/BzX4sfGICI1/"
+          >
+            {" "}
+            {" -> photo <- "}{" "}
+          </a>
         </motion.div>
       </div>
     </section>
