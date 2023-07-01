@@ -15,16 +15,24 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, description }) => {
-  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-95  transition duration-500 
+const Project = ({ title, description, link }) => {
+  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-100  transition duration-500 
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair ">{title}</p>
+        <p className="text-4xl font-playfair ">{title}</p>
         <p className="mt-7">{description}</p>
+        <a
+          href={link}
+          className="mt-10 font-playfair text-deep-blue rounded-full font-semibold
+              hover:bg-blue hover:text-white transition duration-500 text-2xl px-4 bg-red"
+        >
+          {" "}
+          View on GitHub
+        </a>
       </div>
       <img
         src={`../assets/${projectTitle}.png`}
@@ -65,7 +73,7 @@ const Projects = () => {
     {
       title: "Epicode clone",
       description: `Clone del sito Epicode, in cui si può svolgere un quiz a risposta multipla, con la possibilità di vedere i risultati.  Primo progetto svolto interamente in javascrpt.`,
-      link: "",
+      link: "https://github.com/bebob94/Epicode-quiz",
     },
     {
       title: "GitHub",
@@ -128,6 +136,7 @@ const Projects = () => {
               key={project.title}
               title={project.title}
               description={project.description}
+              link={project.link}
             />
           ))}
           {/* ROW 3 */}

@@ -97,7 +97,7 @@ const MySkills = () => {
           </p>
           <div className="flex justify-center items-center">
             <a
-              className="bg-gradient-rainblue text-deep-blue rounded-full   font-semibold
+              className="bg-gradient-rainblue text-deep-blue rounded-full px-3 py-1 mt-1 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
               href="../../public/Alberto_Macis_-_Junior_Web_Developer_Fullstack (19).pdf"
               download
@@ -130,17 +130,17 @@ const MySkills = () => {
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5 mb-2">
-            On June 2023 i completed an intensive 950-hour course with Epicode
-            Italia 👨🏻‍💻, where I learned to develop front-end and back-end web
-            applications and use the latest technologies.📲
-            <br /> I have had the opportunity to work on multiple projects that
-            have allowed me to apply the skills I have acquired in a real
-            development environment.💼
+            On June 2023 I completed an intensive 950-hour course with
+            Epicode👨🏻‍💻, where I learned to develop front-end and back-end web
+            applications and use the latest technologies.📲 I have had the
+            opportunity to work on multiple projects, individually and with
+            others people, that have allowed me to apply the skills I have
+            acquired in a real development environment.
           </p>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center">
             <a
               className="bg-gradient-rainblue text-deep-blue rounded-full font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
+              hover:bg-blue hover:text-white transition duration-500 px-3 py-1 mt-1"
               href="https://benchmark.epicode.com/credentials/64872a2fcaff90a796586293"
             >
               {" "}
@@ -180,7 +180,7 @@ const MySkills = () => {
           <div className="flex justify-center items-center">
             <a
               className="bg-gradient-rainblue text-deep-blue rounded-full font-semibold 
-              hover:bg-blue hover:text-white transition duration-500"
+              hover:bg-blue hover:text-white transition duration-500 px-3 py-1 mt-1"
               href=" https://www.instagram.com/p/BzX4sfGICI1/"
             >
               {" "}
