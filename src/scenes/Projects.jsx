@@ -16,7 +16,7 @@ const projectVariant = {
 };
 
 const Project = ({ title, description, link }) => {
-  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-100  transition duration-500 
+  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-100 rounded-2xl transition duration-500 
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
@@ -27,7 +27,7 @@ const Project = ({ title, description, link }) => {
         <p className="mt-7">{description}</p>
         <a
           href={link}
-          className="mt-10 font-playfair text-deep-blue rounded-full font-semibold
+          className="mt-10 font-playfair text-deep-blue rounded-full  font-semibold
               hover:bg-blue hover:text-white transition duration-500 text-2xl px-4 bg-red"
         >
           {" "}
@@ -37,7 +37,7 @@ const Project = ({ title, description, link }) => {
       <img
         src={`../assets/${projectTitle}.png`}
         alt={projectTitle}
-        className="border-white border-2  w-[420px] max-h-[400px]"
+        className="border-white border-2  rounded-2xl   w-[420px] max-h-[400px]"
       />
     </motion.div>
   );
@@ -125,7 +125,7 @@ const Projects = () => {
         >
           {/* ROW 1 */}
           <div
-            className="flex justify-center text-center items-center p-10  border-white border-2 bg-red
+            className="flex justify-center text-center items-center p-10 rounded-2xl border-white border-2 bg-red
               max-w-[420px] max-h-[415px] text-2xl font-playfair font-semibold"
           >
             BEAUTIFUL USER INTERFACES
@@ -142,7 +142,7 @@ const Projects = () => {
           {/* ROW 3 */}
 
           <div
-            className="flex justify-center border-white border-2 text-center items-center p-10 bg-blue
+            className="flex justify-center rounded-2xl border-white border-2 text-center items-center p-10 bg-blue
               max-w-[420px] max-h-[420px] text-2xl font-playfair font-semibold"
           >
             SMOOTH USER EXPERIENCE
