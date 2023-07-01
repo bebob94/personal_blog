@@ -16,17 +16,21 @@ const projectVariant = {
 };
 
 const Project = ({ title, description }) => {
-  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
+  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90  transition duration-500 
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{title}</p>
+        <p className="text-2xl font-playfair ">{title}</p>
         <p className="mt-7">{description}</p>
       </div>
-      <img src={`../assets/${projectTitle}.png`} alt={projectTitle} />
+      <img
+        src={`../assets/${projectTitle}.png`}
+        alt={projectTitle}
+        className="border-white border-2"
+      />
     </motion.div>
   );
 };
@@ -35,31 +39,31 @@ const Projects = () => {
   const projectData = [
     {
       title: "M.V.S.sport",
-      description: "Descrizione del progetto M.V.S.sport",
+      description: `Sito sportivo che permette di prenotare campi ed aggiungersi a prenotazioni di altri utenti.  Progetto creato in java e react Typescript.`,
     },
     {
       title: "Linkedin Clone",
-      description: "Descrizione del progetto Linkedin Clone",
+      description: `Clone del noto sito Linkedin con tutte le sezioni home, profilo, ricerca lavoro e la possibilità di inserire post, commenti e like.  Progetto frontend creato con react typescript.`,
     },
     {
       title: "Spotify Clone",
-      description: "Descrizione del progetto Spotify Clone",
+      description: `Clone del noto sito Spotify con la possibilità di ricercare le canzoni per genere autore o titolo e salvarle nei preferiti. Progetto frontend creato con Javascript.`,
     },
     {
       title: "Netflix Clone",
-      description: "Descrizione del progetto Netflix Clone",
+      description: `Clone del noto sito Netflix, con la possibilità di ricercare i film per autore e titolo. Primo progetto frontend creato con React.`,
     },
     {
       title: "App Meteo",
-      description: "Descrizione del progetto App Meteo",
+      description: `Applicazione meteo che permette di vedere le condizioni atmosferiche della località che si preferisce. Progetto frontend creato con React.`,
     },
     {
       title: "Epicode clone",
-      description: "Descrizione del progetto Epicode clone",
+      description: `Clone del sito Epicode, in cui si può svolgere un quiz a risposta multipla, con la possibilità di vedere i risultati.  Primo progetto svolto interamente in javascrpt.`,
     },
     {
       title: "GitHub",
-      description: "Descrizione del progetto GitHub",
+      description: "Statistiche Giugno 2023 GitHub",
     },
   ];
   return (
@@ -105,8 +109,8 @@ const Projects = () => {
         >
           {/* ROW 1 */}
           <div
-            className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[420px] max-h-[400px] text-2xl font-playfair font-semibold"
+            className="flex justify-center text-center items-center p-10  border-white border-2 bg-red
+              max-w-[420px] max-h-[415px] text-2xl font-playfair font-semibold"
           >
             BEAUTIFUL USER INTERFACES
           </div>
@@ -121,8 +125,8 @@ const Projects = () => {
           {/* ROW 3 */}
 
           <div
-            className="flex justify-center text-center items-center p-10 bg-blue
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+            className="flex justify-center border-white border-2 text-center items-center p-10 bg-blue
+              max-w-[420px] max-h-[420px] text-2xl font-playfair font-semibold"
           >
             SMOOTH USER EXPERIENCE
           </div>
