@@ -17,7 +17,7 @@ const Gallery = () => {
     <section id="gallery" className="pt-32 pb-16">
       {/* HEADING */}
       <motion.div
-        className="md:w-2/3 text-center md:text-left"
+        className="md:w-2/5 mx-auto text-center "
         initial="hidden"
         whileInView="visible"
         viewport={{ root: true, amount: 0.5 }}
@@ -30,8 +30,9 @@ const Gallery = () => {
         <p className="font-playfair font-semibold text-4xl mb-5 text-red">
           Gallery
         </p>
-        <LineGradient width=" w-1/5" />
-
+        <div className="flex justify-center mt-5">
+          <LineGradient width=" w-3/5 " />
+        </div>
         <p className="mt-10">
           Welcome to the My Gallery section! Here you can take a look at the
           codes of my projects. This humble gallery represents my commitment to
