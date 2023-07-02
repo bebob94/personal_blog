@@ -15,8 +15,8 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, description, link }) => {
-  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-100 rounded-2xl transition duration-500 
+const Project = ({ title, description, link, language }) => {
+  const overlayStyles = `absolute h-4/5 w-11/12 opacity-0 hover:opacity-100 rounded-2xl transition duration-500 
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
@@ -24,69 +24,89 @@ const Project = ({ title, description, link }) => {
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-4xl font-playfair ">{title}</p>
-        <p className="mt-7">{description}</p>
+        <p className="mt-7 font-serif">{description}</p>
         <a
           href={link}
-          className="mt-10 font-playfair text-deep-blue rounded-full  font-semibold
+          className="font-playfair text-deep-blue rounded-full mt-5 font-semibold
               hover:bg-blue hover:text-white transition duration-500 text-2xl px-4 bg-red"
         >
           {" "}
-          View on GitHub
+          {language === true ? "View on GitHub" : "Vedi su GitHub"}
         </a>
       </div>
       <img
         src={`../assets/${projectTitle}.png`}
         alt={projectTitle}
-        className="border-white border-2  rounded-2xl   w-[420px] max-h-[400px]"
+        className="border-white border-2  rounded-2xl   w-11/12 h-4/5"
       />
     </motion.div>
   );
 };
 
-const Projects = () => {
+const Projects = ({ language }) => {
   const projectData = [
     {
       title: "M.V.S.sport",
-      description: `Sito sportivo che permette di prenotare campi ed aggiungersi a prenotazioni di altri utenti.  Progetto creato in java e react Typescript.`,
+      description1:
+        "Sports website that allows you to book fields and join other users' reservations. Project created in Java and React Typescript.",
+      description2:
+        "Sito sportivo che permette di prenotare campi ed aggiungersi a prenotazioni di altri utenti. Progetto creato in java e react Typescript.",
       link: "https://github.com/bebob94/MVS_Sports",
     },
     {
       title: "Linkedin Clone",
-      description: `Clone del noto sito Linkedin con tutte le sezioni home, profilo, ricerca lavoro e la possibilità di inserire post, commenti e like.  Progetto frontend creato con react typescript.`,
+      description1:
+        "Clone of the popular site Linkedin with all the sections home, profile, job search, and the ability to post, comment, and like. Frontend project created with React TypeScript.",
+      description2:
+        "Clone del noto sito Linkedin con tutte le sezioni home, profilo, ricerca lavoro e la possibilità di inserire post, commenti e like.  Progetto frontend creato con react typescript.",
       link: "https://github.com/lucaf1990/Linkedin",
     },
     {
       title: "Spotify Clone",
-      description: `Clone del noto sito Spotify con la possibilità di ricercare le canzoni per genere autore o titolo e salvarle nei preferiti. Progetto frontend creato con Javascript.`,
+      description1:
+        "Clone of the popular site Spotify with the ability to search for songs by genre, artist, or title and save them as favorites. Frontend project created with JavaScript.",
+      description2:
+        "Clone del noto sito Spotify con la possibilità di ricercare le canzoni per genere autore o titolo e salvarle nei preferiti. Progetto frontend creato con Javascript.",
       link: "https://github.com/lucaf1990/SPOTIFY-BuildWeek",
     },
     {
       title: "Netflix Clone",
-      description: `Clone del noto sito Netflix, con la possibilità di ricercare i film per autore e titolo. Primo progetto frontend creato con React.`,
+      description1:
+        "Clone of the popular site Netflix, with the ability to search for movies by artist and title. First frontend project created with React.",
+      description2:
+        "Clone del noto sito Netflix, con la possibilità di ricercare i film per autore e titolo. Primo progetto frontend creato con React.",
       link: "https://github.com/bebob94/Netflix-Clone",
     },
     {
       title: "App Meteo",
-      description: `Applicazione meteo che permette di vedere le condizioni atmosferiche della località che si preferisce. Progetto frontend creato con React.`,
+      description1:
+        "Weather application that allows you to see the atmospheric conditions of the preferred location. Frontend project created with React.",
+      description2:
+        "Applicazione meteo che permette di vedere le condizioni atmosferiche della località che si preferisce. Progetto frontend creato con React.",
       link: "https://github.com/bebob94/app-Meteo",
     },
     {
       title: "Epicode clone",
-      description: `Clone del sito Epicode, in cui si può svolgere un quiz a risposta multipla, con la possibilità di vedere i risultati.  Primo progetto svolto interamente in javascrpt.`,
+      description1:
+        "Clone of the Epicode website, where you can take a multiple-choice quiz with the ability to view the results. First project developed entirely in JavaScript.",
+      description2:
+        "Clone del sito Epicode, in cui si può svolgere un quiz a risposta multipla, con la possibilità di vedere i risultati.  Primo progetto svolto interamente in javascrpt.",
       link: "https://github.com/bebob94/Epicode-quiz",
     },
     {
       title: "GitHub",
-      description: "Statistiche Giugno 2023 GitHub",
-
-      link: "https://github.com/bebob94",
+      description1: "GitHub June 2023 Statistics",
+      description2: "Statistiche Giugno 2023 GitHub",
     },
   ];
   return (
-    <section id="projects" className="pt-32 pb-48">
+    <section
+      id={language === true ? "projects" : "progetti"}
+      className="pt-24 pb-48"
+    >
       {/* HEADINGS */}
       <motion.div
-        className="md:w-2/5 mx-auto text-center"
+        className="md:w-3/5 mx-auto text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ root: true, amount: 0.5 }}
@@ -98,19 +118,17 @@ const Projects = () => {
       >
         <div>
           <p className="font-playfair font-semibold text-4xl">
-            <span className="text-red">PRO</span>JECTS
+            <span className="text-red">PRO</span>
+            {language === true ? "JECTS" : "GETTI"}
           </p>
           <div className="flex justify-center mt-5">
             <LineGradient width="w-2/3" />
           </div>
         </div>
-        <p className="mt-6 mb-10">
-          In the "Projects" section of my blog, I share a variety of projects
-          that I have created and developed. This section offers you an
-          opportunity to explore my creations, experiments, and passions in the
-          field of web development. You will be able to get an idea of my skills
-          and experiences, and I hope they can inspire you for your future
-          projects.
+        <p className="mt-6 mb-10 font-serif">
+          {language === true
+            ? "In the 'Projects' section of my blog, I share a variety of projects that I have created and developed. This section offers you an opportunity to explore my creations, experiments, and passions in the field of web development. You will be able to get an idea of my skills and experiences, and I hope they can inspire you for your future projects."
+            : "Nella sezione 'Progetti' del mio blog, condivido una varietà di progetti che ho creato e sviluppato. Questa sezione ti offre l'opportunità di esplorare le mie creazioni, gli esperimenti e le passioni nel campo dello sviluppo web. Sarai in grado di avere un'idea delle mie competenze ed esperienze e spero che possano ispirarti per i tuoi progetti futuri."}
         </p>
       </motion.div>
 
@@ -126,16 +144,20 @@ const Projects = () => {
           {/* ROW 1 */}
           <div
             className="flex justify-center text-center items-center p-10 rounded-2xl border-white border-2 bg-red
-              max-w-[420px] max-h-[415px] text-2xl font-playfair font-semibold"
+            w-11/12 h-4/5 text-2xl font-playfair font-semibold"
           >
-            BEAUTIFUL USER INTERFACES
+            {language === true
+              ? "BEAUTIFUL USER INTERFACES"
+              : " BELLE INTERFACCE UTENTE"}
           </div>
 
           {projectData.map((project) => (
             <Project
               key={project.title}
               title={project.title}
-              description={project.description}
+              description={
+                language === true ? project.description1 : project.description2
+              }
               link={project.link}
             />
           ))}
@@ -143,9 +165,11 @@ const Projects = () => {
 
           <div
             className="flex justify-center rounded-2xl border-white border-2 text-center items-center p-10 bg-blue
-              max-w-[420px] max-h-[420px] text-2xl font-playfair font-semibold"
+            w-11/12 h-4/5 text-2xl font-playfair font-semibold"
           >
-            SMOOTH USER EXPERIENCE
+            {language === true
+              ? "SMOOTH USER EXPERIENCE"
+              : "ESPERIENZA UTENTE FLUIDA"}
           </div>
         </motion.div>
       </div>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import profile from "../assets/profilo.jpg";
 
-const Landing = ({ setSelectedPage }) => {
+const Landing = ({ setSelectedPage, language }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
     <section
@@ -56,9 +56,9 @@ const Landing = ({ setSelectedPage }) => {
             </span>
           </p>
           <h2 className="mt-12 font-playfair text-3xl text-center md:text-start">
-            Junior Web Developer{" <Fullstack/>"}
+            Junior Developer{"<Fullstack/>"}
           </h2>
-          <p className="mt-4 mb-7 text-base text-center md:text-start">
+          <p className="mt-4 mb-7 font-serif text-center md:text-start">
             | HTML & CSS | Javascript | React | Redux | Typescript | <br />|
             Java | SQL | SpringBoot | Agile & Scrum | Ecc...
           </p>
@@ -82,7 +82,7 @@ const Landing = ({ setSelectedPage }) => {
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            Contact Me
+            {language === true ? "Contact Me" : "Contattami"}
           </AnchorLink>
           <AnchorLink
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
@@ -90,7 +90,7 @@ const Landing = ({ setSelectedPage }) => {
             href="#contact"
           >
             <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
-              Let's talk.
+              {language === true ? "Let's talk. " : "Parliamone"}
             </div>
           </AnchorLink>
         </motion.div>

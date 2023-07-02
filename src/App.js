@@ -5,7 +5,6 @@ import MySkills from "./scenes/MySkills";
 import LineGradient from "./components/LineGradient";
 import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
-import Footer from "./scenes/Footer";
 import useMediaQuery from "./hooks/useMediaQuery";
 import { useEffect, useState } from "react";
 import Gallery from "./scenes/Gallery";
@@ -15,6 +14,7 @@ function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 1060px)");
+  const [language, setLanguage] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,17 +29,20 @@ function App() {
   }, []);
 
   return (
-    <div className="app bg-deep-blue">
+    <div className="app bg-orange-600">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
+        language={language}
+        setLanguage={setLanguage}
       />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto md:h-full mb-10">
         {isDesktop && (
           <DotGroup
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
+            language={language}
           />
         )}
         <motion.div
@@ -47,17 +50,17 @@ function App() {
           amount="all"
           onViewportEnter={() => setSelectedPage("home")}
         >
-          <Landing setSelectedPage={setSelectedPage} />
+          <Landing setSelectedPage={setSelectedPage} language={language} />
         </motion.div>
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full mb-72">
+      <div className="w-5/6 mx-auto md:h-full mb-96">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
           onViewportEnter={() => setSelectedPage("about")}
         >
-          <MySkills />
+          <MySkills language={language} />
         </motion.div>
       </div>
       <LineGradient />
@@ -67,17 +70,17 @@ function App() {
           amount="all"
           onViewportEnter={() => setSelectedPage("projects")}
         >
-          <Projects />
+          <Projects language={language} />
         </motion.div>
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full mb-40">
+      <div className="w-5/6 mx-auto md:h-full mb-96">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
           onViewportEnter={() => setSelectedPage("gallery")}
         >
-          <Gallery />
+          <Gallery language={language} />
         </motion.div>
       </div>
       <LineGradient />
@@ -87,10 +90,9 @@ function App() {
           amount="all"
           onViewportEnter={() => setSelectedPage("contact")}
         >
-          <Contact />
+          <Contact language={language} />
         </motion.div>
       </div>
-      <Footer />
     </div>
   );
 }

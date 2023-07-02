@@ -2,10 +2,13 @@ import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 
-const MySkills = () => {
+const MySkills = ({ language }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="about" className="pt-20 pb-24">
+    <section
+      id={language === true ? "about" : "su di me"}
+      className="pt-20 pb-24"
+    >
       {/* HEADER AND IMAGE SECTION */}
       <div className="md:flex md:justify-between md:gap-16 mt-24">
         <motion.div
@@ -20,7 +23,16 @@ const MySkills = () => {
           }}
         >
           <p className="font-playfair font-semibold text-4xl mb-3">
-            MY <span className="text-red">SKILLS</span>
+            {language === true ? (
+              <>
+                {"MY "} <span className="text-red">SKILLS</span>
+              </>
+            ) : (
+              <>
+                {"LE MIE "}
+                <span className="text-red">COMPETENZE</span>
+              </>
+            )}
           </p>
           <LineGradient width="w-1/3" />
           <h3 className="font-opensans font-semibold text-2xl mt-4">
@@ -38,7 +50,7 @@ const MySkills = () => {
             Spring Security, Spring Web.
           </p>
           <h3 className="font-opensans font-semibold text-2xl mt-4">
-            General:
+            {language === true ? "General" : "Generle"}
           </h3>
           <p className=" text-1xl">
             GitHub, Git, Postman, Discord, Visual Studio Code, Trello, Agile &
@@ -82,18 +94,15 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">01</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Description
+                {language === true ? "Description" : "Descrizione"}
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-orange-700 absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5 mb-2">
-            Hello everyone!🙋🏻‍♂️ My name is Alberto Macis, i am a young man with
-            extensive experience in various sales-related fields🤝🏻, customer
-            relationship management, and direct customer assistance🆘.
-            Currently, I am expanding my skills in FullStack Web Development.👨🏻‍💻
-            I constantly strive to improve my skills, keeping up with the latest
-            industry trends.
+          <p className="mt-5 mb-2 font-serif">
+            {language === true
+              ? " Hello everyone!🙋🏻‍♂️ My name is Alberto Macis, i am a young man with extensive experience in various sales-related fields🤝🏻, customer relationship management, and direct customer assistance🆘. Currently, I am expanding my skills in FullStack Web Development.👨🏻‍💻 I constantly strive to improve my skills, keeping up with the latest industry trends."
+              : "Ciao a tutti!🙋🏻‍♂️ Mi chiamo Alberto Macis, sono un giovane con ampia esperienza in diversi settori legati alle vendite🤝🏻, alla gestione delle relazioni con i clienti e all'assistenza diretta al cliente🆘. Attualmente sto ampliando le mie competenze nello sviluppo web FullStack.👨🏻‍💻 Mi impegno costantemente nel migliorare le mie abilità, tenendomi aggiornato sulle ultime tendenze del settore."}
           </p>
           <div className="flex justify-center items-center">
             <a
@@ -124,18 +133,15 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">02</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Experience
+                {language === true ? "Experience" : "Esperienza"}
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5 mb-2">
-            On June 2023 I completed an intensive 950-hour course with
-            Epicode👨🏻‍💻, where I learned to develop front-end and back-end web
-            applications and use the latest technologies.📲 I have had the
-            opportunity to work on multiple projects, individually and with
-            others people, that have allowed me to apply the skills I have
-            acquired in a real development environment.
+          <p className="mt-5 mb-2 font-serif">
+            {language === true
+              ? "On June 2023 I completed an intensive 950-hour course with Epicode👨🏻‍💻, where I learned to develop front-end and back-end web applications and use the latest technologies.📲 I have had the opportunity to work on multiple projects, individually and with others people, that have allowed me to apply the skills I have acquired in a real development environment."
+              : "In giugno 2023 ho completato un corso intensivo di 950 ore presso Epicode👨🏻‍💻, dove ho imparato a sviluppare applicazioni web front-end e back-end utilizzando le ultime tecnologie.📲 Ho avuto l'opportunità di lavorare su diversi progetti, sia individualmente che in gruppo, che mi hanno permesso di applicare le competenze acquisite in un ambiente di sviluppo reale."}
           </p>
           <div className="flex justify-center">
             <a
@@ -144,7 +150,9 @@ const MySkills = () => {
               href="https://benchmark.epicode.com/credentials/64872a2fcaff90a796586293"
             >
               {" "}
-              {" -> Certificate <- "}{" "}
+              {language === true
+                ? " -> Certificate <- "
+                : " -> Certificato <- "}
             </a>
           </div>
         </motion.div>
@@ -163,19 +171,14 @@ const MySkills = () => {
           <div className="relative h-32">
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">03</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">
-                Hobbies
-              </p>
+              <p className="font-playfair font-semibold text-3xl mt-3">Hobby</p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-violet-900 absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-lime-500 absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5 mb-2">
-            My involvement in professional football⚽ has taught me the
-            importance of a united team focused on a common goal. I have learned
-            that open communication, mutual trust, and determination are
-            essential for collective success.🎯 As a captain, I have developed
-            leadership skills, a strategic vision, and the ability to motivate
-            others to give their best.🥋
+          <p className="mt-5 mb-2 font-serif">
+            {language === true
+              ? "My involvement in professional football⚽ has taught me the importance of a united team focused on a common goal. I have learned that open communication, mutual trust, and determination are essential for collective success.🎯 As a captain, I have developed leadership skills, a strategic vision, and the ability to motivate others to give their best."
+              : "Il coinvolgimento nel calcio professionistico⚽ mi ha insegnato l'importanza di una squadra unita e focalizzata su un obiettivo comune. Ho imparato che la comunicazione aperta, la fiducia reciproca e la determinazione sono essenziali per il successo collettivo.🎯 Come capitano, ho sviluppato competenze di leadership, una visione strategica e la capacità di motivare gli altri a dare il loro meglio."}
           </p>
           <div className="flex justify-center items-center">
             <a
@@ -184,7 +187,7 @@ const MySkills = () => {
               href=" https://www.instagram.com/p/BzX4sfGICI1/"
             >
               {" "}
-              {" -> Photo <- "}{" "}
+              {language === true ? " -> Photo <- " : " -> Foto <- "}
             </a>
           </div>
         </motion.div>

@@ -2,7 +2,7 @@ import LineGradient from "../components/LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 
-const Contact = () => {
+const Contact = ({ language }) => {
   const {
     register,
     trigger,
@@ -18,7 +18,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="contact py-48">
+    <section
+      id={language === true ? "contact" : "contatti"}
+      className="contact py-24"
+    >
       {/* HEADINGS */}
       <motion.div
         initial="hidden"
@@ -33,7 +36,10 @@ const Contact = () => {
       >
         <div>
           <p className="font-playfair font-semibold text-4xl">
-            <span className="text-yellow">CONTACT ME</span> TO GET STARTED
+            <span className="text-yellow">
+              {language === true ? "CONTACT ME" : "CONTATTAMI"}
+            </span>{" "}
+            {language === true ? "TO GET STARTED" : "PER INIZIARE"}
           </p>
           <div className="flex md:justify-end my-5">
             <LineGradient width="w-3/5" />
@@ -81,7 +87,7 @@ const Contact = () => {
             <input
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
               type="text"
-              placeholder="NAME"
+              placeholder={language === true ? "NAME" : "NOME"}
               {...register("name", {
                 required: true,
                 maxLength: 100,
@@ -113,7 +119,7 @@ const Contact = () => {
             <textarea
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
               name="message"
-              placeholder="MESSAGE"
+              placeholder={language === true ? "MESSAGE" : "MESSAGGIO"}
               rows="4"
               cols="50"
               {...register("message", {
@@ -134,7 +140,7 @@ const Contact = () => {
               className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
               type="submit"
             >
-              SEND ME A MESSAGE
+              {language === true ? " SEND ME A MESSAGE" : "INVIA UN MESSAGGIO"}
             </button>
           </form>
         </motion.div>

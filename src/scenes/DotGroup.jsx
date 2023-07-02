@@ -1,6 +1,6 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const DotGroup = ({ selectedPage, setSelectedPage }) => {
+const DotGroup = ({ selectedPage, setSelectedPage, language }) => {
   const selectedStyles = `relative bg-yellow before:absolute before:w-6 before:h-6 before:rounded-full
     before:border-2 before:border-yellow before:left-[-50%] before:top-[-50%]`;
 
@@ -15,7 +15,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
       />
 
       <AnchorLink
-        href="#about"
+        href={language === true ? "#about" : "#su di me"}
         className={`${
           selectedPage === "about" ? selectedStyles : "bg-dark-grey"
         } w-3 h-3 rounded-full`}
@@ -23,7 +23,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
       />
 
       <AnchorLink
-        href="#projects"
+        href={language === true ? "#projects" : "#progetti"}
         className={`${
           selectedPage === "projects" ? selectedStyles : "bg-dark-grey"
         } w-3 h-3 rounded-full`}
@@ -31,7 +31,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
       />
 
       <AnchorLink
-        href="#gallery"
+        href={language === true ? "#gallery" : "#galleria"}
         className={`${
           selectedPage === "gallery" ? selectedStyles : "bg-dark-grey"
         } w-3 h-3 rounded-full`}
@@ -39,7 +39,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
       />
 
       <AnchorLink
-        href="#contact"
+        href={language === true ? "#contact" : "#contatti"}
         className={`${
           selectedPage === "contact" ? selectedStyles : "bg-dark-grey"
         } w-3 h-3 rounded-full`}
