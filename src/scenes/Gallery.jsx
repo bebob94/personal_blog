@@ -46,7 +46,7 @@ const Gallery = ({ language }) => {
       link: image2,
     },
     {
-      title: "Interior of Torre Capoferrato",
+      title: "Torre Capoferrato",
       description1: "View from the interior of the watchtower.",
       description2: "Vista dall'interno della torre d'avvistamento",
       link: image3,
@@ -72,7 +72,7 @@ const Gallery = ({ language }) => {
       link: image6,
     },
     {
-      title: "Path to Sa fossa de su para",
+      title: "Sa fossa de su para",
       description1: "Path and aerial view of the previous waterfall.",
       description2: "Percorso e vista dall'alto della cascata precedente",
       link: image7,
@@ -96,13 +96,13 @@ const Gallery = ({ language }) => {
       link: image10,
     },
     {
-      title: "Interior of Castello di Quirra",
+      title: "Castello di Quirra",
       description1: "View from the interior of Castello di Quirra.",
       description2: "Vista dall'interno del castello di Quirra",
       link: image11,
     },
     {
-      title: "View of Castello di Quirra",
+      title: "Castello di Quirra",
       description1: "View from the exterior of Castello di Quirra.",
       description2: "Vista dall'esterno del castello di Quirra",
       link: image12,
@@ -122,10 +122,7 @@ const Gallery = ({ language }) => {
   ];
 
   return (
-    <section
-      id={language === true ? "gallery" : "galleria"}
-      className="pt-24 pb-16"
-    >
+    <section id={language === true ? "gallery" : "galleria"} className="pt-24 ">
       {/* HEADING */}
       <motion.div
         className="md:w-3/5 mx-auto text-center "

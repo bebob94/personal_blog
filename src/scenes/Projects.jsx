@@ -143,7 +143,7 @@ const Projects = ({ language }) => {
         >
           {/* ROW 1 */}
           <div
-            className="flex justify-center text-center items-center p-10 rounded-2xl border-white border-2 bg-red
+            className="flex justify-center text-center items-center md:none p-10 rounded-2xl border-white border-2 bg-red
             w-11/12 h-4/5 text-2xl font-playfair font-semibold"
           >
             {language === true
