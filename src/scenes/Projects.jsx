@@ -1,12 +1,12 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
-import image1 from "../../public/assets/M.V.S.sport.png";
-import image2 from "../../public/assets/Linkedin-Clone.png";
-import image3 from "../../public/assets/Spotify-Clone.png";
-import image4 from "../../public/assets/Netflix-Clone.png";
-import image5 from "../../public/assets/App-Meteo.png";
-import image6 from "../../public/assets/Epicode-clone.png";
-import image7 from "../../public/assets/GitHub.png";
+import image1 from "../assets/M.V.S.sport.png";
+import image2 from "../assets/Linkedin-Clone.png";
+import image3 from "../assets/Spotify-Clone.png";
+import image4 from "../assets/Netflix-Clone.png";
+import image5 from "../assets/App-Meteo.png";
+import image6 from "../assets/Epicode-clone.png";
+import image7 from "../assets/GitHub.png";
 
 const container = {
   hidden: {},
