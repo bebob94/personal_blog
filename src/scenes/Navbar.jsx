@@ -27,7 +27,7 @@ const Navbar = ({
   setLanguage,
 }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const isDesktop = useMediaQuery("(min-width: 900px)");
   const navbarBackground = isTopOfPage ? "" : "bg-red";
 
   return (

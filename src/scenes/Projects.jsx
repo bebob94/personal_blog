@@ -16,19 +16,19 @@ const projectVariant = {
 };
 
 const Project = ({ title, description, link, language }) => {
-  const overlayStyles = `absolute h-4/5 w-11/12 opacity-0 hover:opacity-100 rounded-2xl transition duration-500 
-    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+  const overlayStyles = `absolute xs:h-full sm:h-4/5 w-full p-2 opacity-0 hover:opacity-100 rounded-2xl transition duration-500 
+    bg-grey z-30 flex flex-col justify-center items-center text-center  text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-        <p className="text-4xl font-playfair ">{title}</p>
-        <p className="mt-7 font-serif">{description}</p>
+        <p className="text-2xl font-playfair ">{title}</p>
+        <p className="mt-3 xs:text-xs font-serif">{description}</p>
         <a
           href={link}
-          className="font-playfair text-deep-blue rounded-full mt-5 font-semibold
-              hover:bg-blue hover:text-white transition duration-500 text-2xl px-4 bg-red"
+          className="font-playfair text-deep-blue rounded-full mt-3 font-semibold
+              hover:bg-blue hover:text-white transition duration-500 md:text-xl xs:text- px-4 bg-red"
         >
           {" "}
           {language === true ? "View on GitHub" : "Vedi su GitHub"}
@@ -37,7 +37,7 @@ const Project = ({ title, description, link, language }) => {
       <img
         src={`../assets/${projectTitle}.png`}
         alt={projectTitle}
-        className="border-white border-2  rounded-2xl   w-11/12 h-4/5"
+        className="border-white border-2  rounded-2xl   w-full h-4/5"
       />
     </motion.div>
   );
@@ -102,7 +102,7 @@ const Projects = ({ language }) => {
   return (
     <section
       id={language === true ? "projects" : "progetti"}
-      className="pt-24 pb-48"
+      className="pt-24 pb-10"
     >
       {/* HEADINGS */}
       <motion.div
@@ -133,9 +133,9 @@ const Projects = ({ language }) => {
       </motion.div>
 
       {/* PROJECTS */}
-      <div className="flex justify-center">
+      <div className="flex justify-center ">
         <motion.div
-          className="sm:grid sm:grid-cols-3"
+          className="sm:grid sm:grid-cols-3 "
           variants={container}
           initial="hidden"
           whileInView="visible"
@@ -143,8 +143,8 @@ const Projects = ({ language }) => {
         >
           {/* ROW 1 */}
           <div
-            className="flex justify-center text-center items-center md:none p-10 rounded-2xl border-white border-2 bg-red
-            w-11/12 h-4/5 text-2xl font-playfair font-semibold"
+            className="flex justify-center text-center items-center xs:h-72 p-10 rounded-2xl border-white border-2 bg-red
+            w-full sm:h-4/5 text-2xl font-playfair font-semibold"
           >
             {language === true
               ? "BEAUTIFUL USER INTERFACES"
@@ -155,6 +155,7 @@ const Projects = ({ language }) => {
             <Project
               key={project.title}
               title={project.title}
+              language={language}
               description={
                 language === true ? project.description1 : project.description2
               }
@@ -164,8 +165,8 @@ const Projects = ({ language }) => {
           {/* ROW 3 */}
 
           <div
-            className="flex justify-center rounded-2xl border-white border-2 text-center items-center p-10 bg-blue
-            w-11/12 h-4/5 text-2xl font-playfair font-semibold"
+            className="flex justify-center rounded-2xl border-white xs:h-72 border-2 text-center items-center p-10 bg-blue
+            w-full sm:h-4/5 text-2xl font-playfair font-semibold"
           >
             {language === true
               ? "SMOOTH USER EXPERIENCE"

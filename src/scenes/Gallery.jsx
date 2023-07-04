@@ -23,100 +23,115 @@ import image14 from "../assets/Monte Narba.jpg";
 const Gallery = ({ language }) => {
   const slides = [
     {
-      title: "Sa perda de sa pippia",
+      title1: "Sa perda de sa pippia",
+      title2: "Sa perda de sa pippia",
       description1:
-        "Hill located above Muravera, the wind blowing in the small cave on the mountain imitates the voice of a child, hence its historic name.",
+        "Hill located above Muravera, the wind blowing in the small cave on the mountain imitates the voice of a child.",
       description2:
-        "Collina situata sopra Muravera, il vento che soffia nella piccola grotta dl monte imita la voce di una bambina, da qui il suo storico nome",
+        "Collina situata sopra Muravera, il vento che soffia nella piccola grotta del monte imita la voce di una bambina.",
       link: image,
     },
     {
-      title: "Sarrabus",
+      title1: "Sarrabus",
+      title2: "Sarrabus",
       description1:
         "View of Sarrabus from one of the highest points in Muravera.",
       description2:
-        "Vista del Sarrabus da una delle punte più alte di Muravera",
+        "Vista del Sarrabus da una delle punte più alte di Muravera.",
       link: image1,
     },
     {
-      title: "Torre Capoferrato",
+      title1: "Capoferrato Tower",
+      title2: "Torre Capoferrato",
       description1: "Famous watchtower located in Capoferrato (Feraxi).",
       description2:
-        "Famosa torre d'avvistamento situata a Capoferrato (Feraxi)",
+        "Famosa torre d'avvistamento situata a Capoferrato (Feraxi).",
       link: image2,
     },
     {
-      title: "Torre Capoferrato",
+      title1: "Capoferrato Tower",
+      title2: "Torre Capoferrato",
       description1: "View from the interior of the watchtower.",
-      description2: "Vista dall'interno della torre d'avvistamento",
+      description2: "Vista dall'interno della torre d'avvistamento.",
       link: image3,
     },
     {
-      title: "Cala Biriola",
+      title1: "Cala Biriola",
+      title2: "Cala Biriola",
       description1:
         "Famous cove in the Arbatax area, accessible only by sea or through a medium-to-high difficulty trekking route.",
       description2:
-        "Famosa cala in zona Arbatax raggiungibile solo via mare o attraverso un trakking di medio-alto livello",
+        "Famosa cala in zona Arbatax raggiungibile solo via mare o attraverso un trakking di medio-alto livello.",
       link: image4,
     },
     {
-      title: "Canyon Cala Biriola",
+      title1: "Canyon Cala Biriola",
+      title2: "Canyon Cala Biriola",
       description1: "Path to reach Cala Biriola.",
-      description2: "Percorso per raggiungere Cala Biriola",
+      description2: "Percorso per raggiungere Cala Biriola.",
       link: image5,
     },
     {
-      title: "Sa fossa de su para",
+      title1: "Sa fossa de su para",
+      title2: "Sa fossa de su para",
       description1: "Famous waterfall located in the Quirra area.",
-      description2: "Famosa cascata situata in zona Quirra",
+      description2: "Famosa cascata situata in zona Quirra.",
       link: image6,
     },
     {
-      title: "Sa fossa de su para",
+      title1: "Sa fossa de su para",
+      title2: "Sa fossa de su para",
       description1: "Path and aerial view of the previous waterfall.",
-      description2: "Percorso e vista dall'alto della cascata precedente",
+      description2: "Percorso e vista dall'alto della cascata precedente.",
       link: image7,
     },
     {
-      title: "Sa Buddidorgia",
+      title1: "Sa Buddidorgia",
+      title2: "Sa Buddidorgia",
       description1: "Natural pools and waterfalls near Sa fossa de su para.",
-      description2: "Piscine e cascate naturali vicino a sa fossa de su para",
+      description2: "Piscine e cascate naturali vicino a sa fossa de su para.",
       link: image8,
     },
     {
-      title: "Grotte di Brecca",
+      title1: "Brecca Sanvito Caves",
+      title2: "Grotte di Brecca",
       description1: "Famous caves of Brecca Sanvito.",
-      description2: "Famose grotte di Brecca Sanvito",
+      description2: "Famose grotte di Brecca Sanvito.",
       link: image9,
     },
     {
-      title: "Castello di Quirra",
+      title1: "Quirra Castle Ruins",
+      title2: "Castello di Quirra",
       description1: "Ruins of an ancient and famous castle in the Quirra area.",
-      description2: "Ruderi di antico e famoso castello nella zona di Quirra",
+      description2: "Ruderi di antico e famoso castello nella zona di Quirra.",
       link: image10,
     },
     {
-      title: "Castello di Quirra",
-      description1: "View from the interior of Castello di Quirra.",
-      description2: "Vista dall'interno del castello di Quirra",
+      title1: "Quirra Castle Ruins",
+      title2: "Castello di Quirra",
+      description1: "View from the interior of Quirra's Castle.",
+      description2: "Vista dall'interno del castello di Quirra.",
       link: image11,
     },
     {
-      title: "Castello di Quirra",
-      description1: "View from the exterior of Castello di Quirra.",
-      description2: "Vista dall'esterno del castello di Quirra",
+      title1: "Quirra Castle Ruins",
+      title2: "Castello di Quirra",
+      description1: "View from the exterior of Quirra's Castle.",
+      description2: "Vista dall'esterno del castello di Quirra.",
       link: image12,
     },
     {
-      title: "Torre dei 10 cavalli",
+      title1: "Tower of the 10 Horses",
+      title2: "Torre dei 10 cavalli",
       description1: "Famous defensive tower located in the Muravera area.",
-      description2: "Famose Torre difensiva situata in zona Muravera",
+      description2: "Famose Torre difensiva situata in zona Muravera.",
       link: image13,
     },
     {
-      title: "Miniere e ruderi Monte Narba",
+      title1: "Monte Narba Mines and Ruins",
+      title2: "Miniere e ruderi Monte Narba",
       description1: "Ancient mines located in the Sanvito area.",
-      description2: "Antiche Miniere situate in zona Sanvito",
+      description2: "Antiche Miniere situate in zona Sanvito.",
       link: image14,
     },
   ];
@@ -173,11 +188,13 @@ const Gallery = ({ language }) => {
           <SwiperSlide key={index}>
             <img
               src={slide.link}
-              alt={slide.title}
+              alt={language === true ? slide.title1 : slide.title2}
               className="rounded-3xl h-100 w-100"
             />
-            <div className="flex justify-center items-center font-playfair text-center my-4  flex-wrap">
-              <h3 className="text-3xl mb-4 w-11/12">{slide.title}</h3>
+            <div className="flex justify-center items-center font-playfair text-center mt-4  flex-wrap">
+              <h3 className="text-3xl mb-4 w-11/12">
+                {language === true ? slide.title1 : slide.title2}
+              </h3>
               <p className="text-1xl">
                 {language === true ? slide.description1 : slide.description2}
               </p>
