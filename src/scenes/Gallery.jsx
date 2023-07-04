@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+
+import { Autoplay } from "swiper";
 import image from "../assets/sa-perda-de-sa-pippia.jpg";
 import image1 from "../assets/Sarrabus.jpg";
 import image2 from "../assets/Capo-Ferrato.jpg";
@@ -172,7 +174,7 @@ const Gallery = ({ language }) => {
       <Swiper
         centeredSlides
         grabCursor={true}
-        slidesPerView={3}
+        slidesPerView={window.innerWidth < 800 ? 1 : 3}
         effect="coverflow"
         coverflowEffect={{
           rotate: 50,
@@ -181,7 +183,10 @@ const Gallery = ({ language }) => {
           modifier: 1,
           slideShadows: false, // Mostra o nasconde le ombre delle diapositive
         }}
-        modules={[EffectCoverflow]}
+        autoplay={{
+          delay: 100, // Tempo di visualizzazione di ogni slide in millisecondi
+          disableOnInteraction: false, // Impedisce all'autoplay di interrompersi quando l'utente interagisce con il carousel
+        }}
         className="mt-16 rounded-3xl"
       >
         {slides.map((slide, index) => (

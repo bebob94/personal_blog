@@ -108,7 +108,7 @@ const MySkills = ({ language }) => {
             <a
               className="bg-gradient-rainblue text-deep-blue rounded-full px-3 py-1 mt-1 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
-              href="../assets/Alberto_Macis_-_Junior_Web_Developer_Fullstack (19).pdf"
+              href="/assets/Alberto_Macis_-_Junior_Web_Developer_Fullstack (19).pdf"
               download
             >
               {" "}
