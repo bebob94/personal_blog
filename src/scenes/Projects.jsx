@@ -59,7 +59,7 @@ const Projects = ({ language }) => {
       description2:
         "Sito sportivo che permette di prenotare campi ed aggiungersi a prenotazioni di altri utenti. Progetto creato in java e react Typescript.",
       link: "https://github.com/bebob94/MVS_Sports",
-      image: { image1 },
+      image: image1,
     },
     {
       title: "Linkedin Clone",
@@ -68,7 +68,7 @@ const Projects = ({ language }) => {
       description2:
         "Clone del noto sito Linkedin con tutte le sezioni home, profilo, ricerca lavoro e la possibilità di inserire post, commenti e like.  Progetto frontend creato con react typescript.",
       link: "https://github.com/lucaf1990/Linkedin",
-      image: { image2 },
+      image: image2,
     },
     {
       title: "Spotify Clone",
@@ -77,7 +77,7 @@ const Projects = ({ language }) => {
       description2:
         "Clone del noto sito Spotify con la possibilità di ricercare le canzoni per genere autore o titolo e salvarle nei preferiti. Progetto frontend creato con Javascript.",
       link: "https://github.com/lucaf1990/SPOTIFY-BuildWeek",
-      image: { image3 },
+      image: image3,
     },
     {
       title: "Netflix Clone",
@@ -86,7 +86,7 @@ const Projects = ({ language }) => {
       description2:
         "Clone del noto sito Netflix, con la possibilità di ricercare i film per autore e titolo. Primo progetto frontend creato con React.",
       link: "https://github.com/bebob94/Netflix-Clone",
-      image: { image4 },
+      image: image4,
     },
     {
       title: "App Meteo",
@@ -95,7 +95,7 @@ const Projects = ({ language }) => {
       description2:
         "Applicazione meteo che permette di vedere le condizioni atmosferiche della località che si preferisce. Progetto frontend creato con React.",
       link: "https://github.com/bebob94/app-Meteo",
-      image: { image5 },
+      image: image5,
     },
     {
       title: "Epicode clone",
@@ -104,13 +104,13 @@ const Projects = ({ language }) => {
       description2:
         "Clone del sito Epicode, in cui si può svolgere un quiz a risposta multipla, con la possibilità di vedere i risultati.  Primo progetto svolto interamente in javascrpt.",
       link: "https://github.com/bebob94/Epicode-quiz",
-      image: { image6 },
+      image: image6,
     },
     {
       title: "GitHub",
       description1: "GitHub June 2023 Statistics",
       description2: "Statistiche Giugno 2023 GitHub",
-      image: { image7 },
+      image: image7,
     },
   ];
   return (
