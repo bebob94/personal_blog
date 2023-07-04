@@ -1,5 +1,12 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
+import image1 from "../../public/assets/M.V.S.sport.png";
+import image2 from "../../public/assets/Linkedin-Clone.png";
+import image3 from "../../public/assets/Spotify-Clone.png";
+import image4 from "../../public/assets/Netflix-Clone.png";
+import image5 from "../../public/assets/App-Meteo.png";
+import image6 from "../../public/assets/Epicode-clone.png";
+import image7 from "../../public/assets/GitHub.png";
 
 const container = {
   hidden: {},
@@ -15,7 +22,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, description, link, language }) => {
+const Project = ({ title, description, link, image, language }) => {
   const overlayStyles = `absolute xs:h-full sm:h-4/5 w-full p-2 opacity-0 hover:opacity-100 rounded-2xl transition duration-500 
     bg-grey z-30 flex flex-col justify-center items-center text-center  text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -35,7 +42,7 @@ const Project = ({ title, description, link, language }) => {
         </a>
       </div>
       <img
-        src={`assets/${projectTitle}.png`}
+        src={image}
         alt={projectTitle}
         className="border-white border-2  rounded-2xl   w-full h-4/5"
       />
@@ -52,6 +59,7 @@ const Projects = ({ language }) => {
       description2:
         "Sito sportivo che permette di prenotare campi ed aggiungersi a prenotazioni di altri utenti. Progetto creato in java e react Typescript.",
       link: "https://github.com/bebob94/MVS_Sports",
+      image: { image1 },
     },
     {
       title: "Linkedin Clone",
@@ -60,6 +68,7 @@ const Projects = ({ language }) => {
       description2:
         "Clone del noto sito Linkedin con tutte le sezioni home, profilo, ricerca lavoro e la possibilità di inserire post, commenti e like.  Progetto frontend creato con react typescript.",
       link: "https://github.com/lucaf1990/Linkedin",
+      image: { image2 },
     },
     {
       title: "Spotify Clone",
@@ -68,6 +77,7 @@ const Projects = ({ language }) => {
       description2:
         "Clone del noto sito Spotify con la possibilità di ricercare le canzoni per genere autore o titolo e salvarle nei preferiti. Progetto frontend creato con Javascript.",
       link: "https://github.com/lucaf1990/SPOTIFY-BuildWeek",
+      image: { image3 },
     },
     {
       title: "Netflix Clone",
@@ -76,6 +86,7 @@ const Projects = ({ language }) => {
       description2:
         "Clone del noto sito Netflix, con la possibilità di ricercare i film per autore e titolo. Primo progetto frontend creato con React.",
       link: "https://github.com/bebob94/Netflix-Clone",
+      image: { image4 },
     },
     {
       title: "App Meteo",
@@ -84,6 +95,7 @@ const Projects = ({ language }) => {
       description2:
         "Applicazione meteo che permette di vedere le condizioni atmosferiche della località che si preferisce. Progetto frontend creato con React.",
       link: "https://github.com/bebob94/app-Meteo",
+      image: { image5 },
     },
     {
       title: "Epicode clone",
@@ -92,11 +104,13 @@ const Projects = ({ language }) => {
       description2:
         "Clone del sito Epicode, in cui si può svolgere un quiz a risposta multipla, con la possibilità di vedere i risultati.  Primo progetto svolto interamente in javascrpt.",
       link: "https://github.com/bebob94/Epicode-quiz",
+      image: { image6 },
     },
     {
       title: "GitHub",
       description1: "GitHub June 2023 Statistics",
       description2: "Statistiche Giugno 2023 GitHub",
+      image: { image7 },
     },
   ];
   return (
@@ -160,6 +174,7 @@ const Projects = ({ language }) => {
                 language === true ? project.description1 : project.description2
               }
               link={project.link}
+              image={project.image}
             />
           ))}
           {/* ROW 3 */}
