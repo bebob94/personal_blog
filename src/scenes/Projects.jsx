@@ -35,7 +35,7 @@ const Project = ({ title, description, link, language }) => {
         </a>
       </div>
       <img
-        src={`../../public/assets/${projectTitle}.png`}
+        src={`assets/${projectTitle}.png`}
         alt={projectTitle}
         className="border-white border-2  rounded-2xl   w-full h-4/5"
       />
