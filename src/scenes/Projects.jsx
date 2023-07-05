@@ -156,14 +156,18 @@ const Projects = ({ language }) => {
           viewport={{ root: true, amount: 0.2 }}
         >
           {/* ROW 1 */}
-          <div
-            className="flex justify-center text-center items-center xs:h-72 p-10 rounded-2xl border-white border-2 bg-red
+          {window.innerWidth > 800 ? (
+            <div
+              className="flex justify-center text-center items-center xs:h-72 p-10 rounded-2xl border-white border-2 bg-red
             w-full sm:h-4/5 text-2xl font-playfair font-semibold"
-          >
-            {language === true
-              ? "BEAUTIFUL USER INTERFACES"
-              : " BELLE INTERFACCE UTENTE"}
-          </div>
+            >
+              {language === true
+                ? "BEAUTIFUL USER INTERFACES"
+                : " BELLE INTERFACCE UTENTE"}
+            </div>
+          ) : (
+            <div className="hidden"></div>
+          )}
 
           {projectData.map((project) => (
             <Project
@@ -179,14 +183,18 @@ const Projects = ({ language }) => {
           ))}
           {/* ROW 3 */}
 
-          <div
-            className="flex justify-center rounded-2xl border-white xs:h-72 border-2 text-center items-center p-10 bg-blue
+          {window.innerWidth > 800 ? (
+            <div
+              className="flex justify-center rounded-2xl border-white xs:h-72 border-2 text-center items-center p-10 bg-blue
             w-full sm:h-4/5 text-2xl font-playfair font-semibold"
-          >
-            {language === true
-              ? "SMOOTH USER EXPERIENCE"
-              : "ESPERIENZA UTENTE FLUIDA"}
-          </div>
+            >
+              {language === true
+                ? "SMOOTH USER EXPERIENCE"
+                : "ESPERIENZA UTENTE FLUIDA"}
+            </div>
+          ) : (
+            <div className="hidden"></div>
+          )}
         </motion.div>
       </div>
     </section>

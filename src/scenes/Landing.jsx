@@ -18,7 +18,6 @@ const Landing = ({ setSelectedPage, language }) => {
             className="relative z-0 ml-20 before:absolute before:-top-12 before:-left-12 before:rounded-t-[400px]
           before:w-full before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-blue before:z-[-1]"
           >
-            ;
             <img
               alt="profile"
               className="hover:filter hover:-translate-x-12 hover:-translate-y-12 rounded-t-[400px]  transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"

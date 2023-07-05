@@ -7,10 +7,10 @@ const MySkills = ({ language }) => {
   return (
     <section
       id={language === true ? "about" : "su di me"}
-      className="pt-20 pb-24"
+      className="pt-20 pb-24 "
     >
       {/* HEADER AND IMAGE SECTION */}
-      <div className="md:flex md:justify-between md:gap-16 mt-24">
+      <div className="md:flex md:justify-between md:gap-16 mt-8">
         <motion.div
           className="md:w-1/3"
           initial="hidden"
@@ -77,7 +77,7 @@ const MySkills = ({ language }) => {
       </div>
 
       {/* SKILLS */}
-      <div className="md:flex md:justify-between mt-6 gap-32">
+      <div className="md:flex md:justify-between mt-4 gap-32">
         {/* Description */}
         <motion.div
           className="md:w-1/3 mt-20"
