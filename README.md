@@ -1,5 +1,6 @@
 # Blog Alberto Macis
-Screenshot del blog
+![Immagine 2023-07-05 143330](https://github.com/bebob94/personal_blog/assets/119256128/62bf5193-f192-4ef0-ae3b-965097b8f74c)
+
 
 ## Descrizione
 Questo progetto rappresenta il mio blog personale, chiamato "Blog Alberto Macis". È un sito web in cui condivido le mie esperienze, competenze e passioni come sviluppatore full stack.
