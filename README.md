@@ -11,10 +11,10 @@ Puoi visitare il blog al seguente link: [Blog](https://alberto-macis.vercel.app/
 
 ## Caratteristiche principali
 
-Sezione About Me: Qui puoi trovare informazioni dettagliate su di me, il mio background e le mie competenze come sviluppatore, nonché le mie passioni come calciatore ed escursionista.  
-Sezione My Projects: In questa sezione, mostro i progetti che ho realizzato, descrivendo le tecnologie utilizzate e i risultati ottenuti.  
-Sezione Gallery: Una galleria fotografica che include un carosello con immagini delle mie avventure ed escursioni.  
-Sezione Contatti: Troverai un modulo per contattarmi direttamente, inviarmi un messaggio e connetterti con me.  
+**Sezione About Me:** Qui puoi trovare informazioni dettagliate su di me, il mio background e le mie competenze come sviluppatore, nonché le mie passioni come calciatore ed escursionista.  
+**Sezione My Projects:** In questa sezione, mostro i progetti che ho realizzato, descrivendo le tecnologie utilizzate e i risultati ottenuti.  
+**Sezione Gallery:** Una galleria fotografica che include un carosello con immagini delle mie avventure ed escursioni.  
+**Sezione Contatti:** Troverai un modulo per contattarmi direttamente, inviarmi un messaggio e connetterti con me.  
 
 ## Tecnologie utilizzate
 
@@ -23,12 +23,12 @@ CSS Framework: Tailwind CSS
 
 ## Come avviare il progetto localmente
 
-Clona il repository sul tuo computer.
-Assicurati di avere installato Node.js sul tuo sistema.
-Apri una finestra del terminale nella directory del progetto.
-Esegui il comando npm install per installare le dipendenze.
-Esegui il comando npm start per avviare l'applicazione.
-Apri il tuo browser e vai all'indirizzo http://localhost:3000 per visualizzare il blog in locale.
+Clona il repository sul tuo computer.  
+Assicurati di avere installato Node.js sul tuo sistema.  
+Apri una finestra del terminale nella directory del progetto.  
+Esegui il comando npm install per installare le dipendenze.  
+Esegui il comando npm start per avviare l'applicazione.  
+Apri il tuo browser e vai all'indirizzo http://localhost:3000 per visualizzare il blog in locale.  
 
 ## Contributi
 
