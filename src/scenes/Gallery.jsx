@@ -172,7 +172,7 @@ const Gallery = ({ language }) => {
       <Swiper
         centeredSlides
         grabCursor={true}
-        slidesPerView={window.innerWidth < 800 ? 1 : 3}
+        slidesPerView={window.innerWidth < 800 ? 2 : 3}
         effect="coverflow"
         coverflowEffect={{
           rotate: 50,
@@ -180,7 +180,6 @@ const Gallery = ({ language }) => {
           depth: 100,
           modifier: 1,
           slideShadows: false,
-          scale: 1.05,
         }}
         modules={[EffectCoverflow]}
         className="mt-16 rounded-3xl"
