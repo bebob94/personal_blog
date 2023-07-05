@@ -3,16 +3,19 @@
 
 
 ## Descrizione
-Questo progetto rappresenta il mio blog personale, chiamato "Blog Alberto Macis". È un sito web in cui condivido le mie esperienze, competenze e passioni come sviluppatore full stack.
+Questo progetto rappresenta il mio blog personale, chiamato "Blog Alberto Macis".
+È un sito web in cui condivido le mie esperienze, competenze e passioni come sviluppatore full stack.
 
 Il blog è stato realizzato utilizzando il framework React e il framework CSS Tailwind CSS per lo stile e il layout.
-
 Puoi visitare il blog al seguente link: [Blog](https://alberto-macis.vercel.app/)
 
 ## Caratteristiche principali
 Sezione About Me: Qui puoi trovare informazioni dettagliate su di me, il mio background e le mie competenze come sviluppatore, nonché le mie passioni come calciatore ed escursionista.
+
 Sezione My Projects: In questa sezione, mostro i progetti che ho realizzato, descrivendo le tecnologie utilizzate e i risultati ottenuti.
+
 Sezione Gallery: Una galleria fotografica che include un carosello con immagini delle mie avventure ed escursioni.
+
 Sezione Contatti: Troverai un modulo per contattarmi direttamente, inviarmi un messaggio e connetterti con me.
 
 ## Tecnologie utilizzate
