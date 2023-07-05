@@ -1,4 +1,4 @@
-# Blog Alberto Macis
+# Blog Personale
 ![Immagine 2023-07-05 143330](https://github.com/bebob94/personal_blog/assets/119256128/62bf5193-f192-4ef0-ae3b-965097b8f74c)
 
 
