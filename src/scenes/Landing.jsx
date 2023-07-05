@@ -12,15 +12,15 @@ const Landing = ({ setSelectedPage, language }) => {
       className="md:flex md:justify-between md:items-center gap-60 md:h-full py-10"
     >
       {/* IMAGE SECTION */}
-      <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
+      <div className="basis-full z-10 mt-16 md:mt-32 flex justify-center md:order-2">
         {isAboveLarge ? (
           <div
-            className="relative z-0 ml-20 before:absolute before:-top-12 before:-left-12 before:rounded-t-[400px]
+            className="relative z-0  before:absolute before:-top-12 before:-left-12 before:rounded-t-[400px]
           before:w-full before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-blue before:z-[-1]"
           >
             <img
               alt="profile"
-              className="hover:filter hover:-translate-x-12 hover:-translate-y-12 rounded-t-[400px]  transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
+              className="hover:filter hover:-translate-x-12 hover:-translate-y-12 rounded-t-[400px]  transition duration-500 z-10 w-full "
               src={profile}
             />
           </div>
@@ -34,7 +34,7 @@ const Landing = ({ setSelectedPage, language }) => {
       </div>
 
       {/* MAIN TEXT */}
-      <div className="z-30 basis-2/5 mt-12 md:mt-32">
+      <div className="z-30 basis-full mt-12 md:mt-32">
         {/* HEADINGS */}
         <motion.div
           initial="hidden"
@@ -48,12 +48,7 @@ const Landing = ({ setSelectedPage, language }) => {
         >
           <p className="text-6xl font-playfair z-10 text-center md:text-start">
             Alberto {""}
-            <span
-              className="  relative xs:text-white text-deep-blue xs:font-semibold  xs:before:content-brush 
-              before:hidden before:-left-[25px] before:-top-[70px] before:z-[-1]"
-            >
-              Macis
-            </span>
+            <span className="text-red">Macis</span>
           </p>
           <h2 className="mt-12 font-playfair text-3xl text-center md:text-start">
             Junior Developer{"<Fullstack/>"}

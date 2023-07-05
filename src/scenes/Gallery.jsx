@@ -1,9 +1,11 @@
 import LineGradient from "../components/LineGradient";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow } from "swiper";
+import { EffectCoverflow, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+import "swiper/css/autoplay";
 import image from "../assets/sa-perda-de-sa-pippia.jpg";
 import image1 from "../assets/Sarrabus.jpg";
 import image2 from "../assets/Capo-Ferrato.jpg";
@@ -136,6 +138,16 @@ const Gallery = ({ language }) => {
     },
   ];
 
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    const swiper = swiperRef.current.swiper;
+
+    if (swiper) {
+      swiper.autoplay.start();
+    }
+  }, []);
+
   return (
     <section id={language === true ? "gallery" : "galleria"} className="pt-24 ">
       {/* HEADING */}
@@ -170,6 +182,7 @@ const Gallery = ({ language }) => {
 
       {/* TESTIMONIALS */}
       <Swiper
+        ref={swiperRef}
         centeredSlides
         grabCursor={true}
         slidesPerView={window.innerWidth < 800 ? 1 : 3}
@@ -181,9 +194,12 @@ const Gallery = ({ language }) => {
           modifier: 1,
           slideShadows: false,
         }}
-        modules={[EffectCoverflow]}
+        modules={[EffectCoverflow, Autoplay]}
         className="mt-16 rounded-3xl"
-        autoplay={{ delay: 1000 }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>

@@ -3,7 +3,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 
 const MySkills = ({ language }) => {
-  const isAboveLarge = useMediaQuery("(min-width: 1060px)");
+  const isAboveLarge = useMediaQuery("(min-width: 1200px)");
   return (
     <section
       id={language === true ? "about" : "su di me"}
