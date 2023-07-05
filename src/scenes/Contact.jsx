@@ -81,7 +81,7 @@ const Contact = ({ language }) => {
           <form
             target="_blank"
             onSubmit={onSubmit}
-            action="https://formsubmit.co/bebo.macis@gmail.com"
+            action="https://formspree.io/f/xwkdkeaj"
             method="POST"
           >
             <input
