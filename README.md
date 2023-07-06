@@ -18,7 +18,7 @@ Sezione **Contatti:** Troverai un modulo per contattarmi direttamente, inviarmi 
 
 ## Tecnologie utilizzate
 
-Front-end: React
+Front-end: React  
 CSS Framework: Tailwind CSS
 
 ## Come avviare il progetto localmente
