@@ -5,10 +5,7 @@ import { motion } from "framer-motion";
 const MySkills = ({ language }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1200px)");
   return (
-    <section
-      id={language === true ? "about" : "su di me"}
-      className="pt-20 pb-24 "
-    >
+    <section id={language === true ? "about" : "su di me"} className="pt-20 ">
       {/* HEADER AND IMAGE SECTION */}
       <div className="md:flex md:justify-between md:gap-16 mt-8">
         <motion.div
@@ -40,14 +37,14 @@ const MySkills = ({ language }) => {
           </h3>
           <p className=" mb-2 text-1xl">
             Html, Css, Sass, Javascript, React, Redux, Router-Dom, Persist,
-            TypeScript, Bootstrap, Tailwind, Axios.
+            TypeScript, Bootstrap, Tailwind.
           </p>
           <h3 className="font-opensans font-semibold text-2xl mt-4">
             Backend:
           </h3>
           <p className=" mb-2 text-1xl">
             Java, PostgreSQL, Maven, JJWT, Lombok, Jpa, SpringBoot, Spring data,
-            Spring Security, Spring Web.
+            Spring Security.
           </p>
           <h3 className="font-opensans font-semibold text-2xl mt-4">
             {language === true ? "General" : "Generle"}
@@ -77,7 +74,7 @@ const MySkills = ({ language }) => {
       </div>
 
       {/* SKILLS */}
-      <div className="md:flex md:justify-between mt-4 gap-32">
+      <div className="md:flex md:justify-between  gap-32">
         {/* Description */}
         <motion.div
           className="md:w-1/3 mt-20"
@@ -141,7 +138,7 @@ const MySkills = ({ language }) => {
           <p className="mt-5 mb-2 font-serif">
             {language === true
               ? "On June 2023 I completed an intensive 950-hour course with Epicode👨🏻‍💻, where I learned to develop front-end and back-end web applications and use the latest technologies.📲 I have had the opportunity to work on multiple projects, individually and with others people, that have allowed me to apply the skills I have acquired in a real development environment."
-              : "In giugno 2023 ho completato un corso intensivo di 950 ore presso Epicode👨🏻‍💻, dove ho imparato a sviluppare applicazioni web front-end e back-end utilizzando le ultime tecnologie.📲 Ho avuto l'opportunità di lavorare su diversi progetti, sia individualmente che in gruppo, che mi hanno permesso di applicare le competenze acquisite in un ambiente di sviluppo reale."}
+              : "In data giugno 2023 ho completato un corso intensivo di 950 ore presso Epicode👨🏻‍💻, dove ho imparato a sviluppare applicazioni web front-end e back-end utilizzando le ultime tecnologie.📲 Ho avuto l'opportunità di lavorare su diversi progetti, sia individualmente che in gruppo, che mi hanno permesso di applicare le competenze acquisite in un ambiente di sviluppo reale."}
           </p>
           <div className="flex justify-center">
             <a
