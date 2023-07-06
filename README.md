@@ -36,5 +36,5 @@ Sono aperto a contributi e suggerimenti per migliorare il blog. Se desideri cont
 
 ## Contatti
 
-Se hai domande, suggerimenti o desideri entrare in contatto con me, puoi utilizzare il modulo nella sezione "Contatti" del blog o inviarmi una mail direttamente all'indirizzo [bebo.macis@gmail.com].
+Se hai domande, suggerimenti o desideri entrare in contatto con me, puoi utilizzare il modulo nella sezione "Contatti" del blog o inviarmi una mail direttamente all'indirizzo bebo.macis@gmail.com .
 Grazie per aver visitato il mio blog "Blog Alberto Macis" e spero che troverai i contenuti interessanti e utili!
