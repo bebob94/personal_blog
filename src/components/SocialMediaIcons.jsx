@@ -19,22 +19,6 @@ const SocialMediaIcons = () => {
       >
         <img alt="GitHub-link" src={GitHub} className="h-10 pb-2 " />
       </a>
-      <a
-        className="hover:opacity-50 transition duration-500"
-        href="https://www.facebook.com/bebo.macis/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img alt="facebook-link" src="../assets/facebook.png" />
-      </a>
-      <a
-        className="hover:opacity-50 transition duration-500"
-        href="https://www.instagram.com/bebomacis/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img alt="instagram-link" src="../assets/instagram.png" />
-      </a>
     </div>
   );
 };
