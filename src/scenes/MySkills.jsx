@@ -113,7 +113,31 @@ const MySkills = ({ language }) => {
             </a>
           </div>
         </motion.div>
-
+        {/* HOBBIES */}
+        <motion.div
+          className="md:w-1/3 mt-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ root: true, amount: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
+          <div className="relative h-32">
+            <div className="z-10">
+              <p className="font-playfair font-semibold text-5xl">03</p>
+              <p className="font-playfair font-semibold text-3xl mt-3">Hobby</p>
+            </div>
+            <div className="w-1/2 md:w-3/4 h-32 bg-lime-500 absolute right-0 top-0 z-[-1]" />
+          </div>
+          <p className="mt-5 mb-2 font-serif">
+            {language === true
+              ? "My involvement in professional football⚽ has taught me the importance of a united team focused on a common goal. I have learned that open communication, mutual trust, and determination are essential for collective success.🎯 As a captain, I have developed leadership skills, a strategic vision, and the ability to motivate others to give their best."
+              : "Il coinvolgimento nel calcio professionistico⚽ mi ha insegnato l'importanza di una squadra unita e focalizzata su un obiettivo comune. Ho imparato che la comunicazione aperta, la fiducia reciproca e la determinazione sono essenziali per il successo collettivo.🎯 Come capitano, ho sviluppato competenze di leadership, una visione strategica e la capacità di motivare gli altri a dare il loro meglio."}
+          </p>
+        </motion.div>
         {/* Experience */}
         <motion.div
           className="md:w-1/3 mt-20"
@@ -150,41 +174,6 @@ const MySkills = ({ language }) => {
               {language === true
                 ? " -> Certificate <- "
                 : " -> Certificato <- "}
-            </a>
-          </div>
-        </motion.div>
-        {/* HOBBIES */}
-        <motion.div
-          className="md:w-1/3 mt-20"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ root: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
-          <div className="relative h-32">
-            <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl">03</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">Hobby</p>
-            </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-lime-500 absolute right-0 top-0 z-[-1]" />
-          </div>
-          <p className="mt-5 mb-2 font-serif">
-            {language === true
-              ? "My involvement in professional football⚽ has taught me the importance of a united team focused on a common goal. I have learned that open communication, mutual trust, and determination are essential for collective success.🎯 As a captain, I have developed leadership skills, a strategic vision, and the ability to motivate others to give their best."
-              : "Il coinvolgimento nel calcio professionistico⚽ mi ha insegnato l'importanza di una squadra unita e focalizzata su un obiettivo comune. Ho imparato che la comunicazione aperta, la fiducia reciproca e la determinazione sono essenziali per il successo collettivo.🎯 Come capitano, ho sviluppato competenze di leadership, una visione strategica e la capacità di motivare gli altri a dare il loro meglio."}
-          </p>
-          <div className="flex justify-center items-center">
-            <a
-              className="bg-gradient-rainblue text-deep-blue rounded-full font-semibold 
-              hover:bg-blue hover:text-white transition duration-500 px-3 py-1 mt-1"
-              href=" https://www.instagram.com/p/BzX4sfGICI1/"
-            >
-              {" "}
-              {language === true ? " -> Photo <- " : " -> Foto <- "}
             </a>
           </div>
         </motion.div>
