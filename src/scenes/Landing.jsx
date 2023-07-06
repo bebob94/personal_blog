@@ -54,8 +54,8 @@ const Landing = ({ setSelectedPage, language }) => {
             Junior Developer{"<Fullstack/>"}
           </h2>
           <p className="mt-4 mb-7 font-serif text-center md:text-start">
-            | HTML & CSS | Javascript | React | Redux | Typescript | <br />|
-            Java | SQL | SpringBoot | Agile & Scrum | Ecc...
+            | HTML & CSS | Javascript | React | Redux | Typescript
+            <br /> | Java | SQL | SpringBoot | Agile & Scrum | Ecc...
           </p>
         </motion.div>
 
@@ -82,10 +82,10 @@ const Landing = ({ setSelectedPage, language }) => {
           <AnchorLink
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
             onClick={() => setSelectedPage("contact")}
-            href={language === true ? "#contact" : "#contatti"}
+            href={language === true ? "#about" : "#su di me"}
           >
             <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
-              {language === true ? "Let's talk. " : "Parliamone"}
+              {language === true ? "Skills" : "Competenze"}
             </div>
           </AnchorLink>
         </motion.div>

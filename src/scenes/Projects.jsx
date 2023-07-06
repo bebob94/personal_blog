@@ -6,7 +6,7 @@ import image3 from "../assets/Spotify-Clone.png";
 import image4 from "../assets/Netflix-Clone.png";
 import image5 from "../assets/App-Meteo.png";
 import image6 from "../assets/Epicode-clone.png";
-import image7 from "../assets/GitHub.png";
+import image7 from "../assets/blog.png";
 
 const container = {
   hidden: {},
@@ -22,7 +22,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, description, link, image, language }) => {
+const Project = ({ title, titolo, description, link, image, language }) => {
   const overlayStyles = `absolute xs:h-full sm:h-4/5 w-full p-2 opacity-0 hover:opacity-100 rounded-2xl transition duration-500 
     bg-grey z-30 flex flex-col justify-center items-center text-center  text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -30,7 +30,9 @@ const Project = ({ title, description, link, image, language }) => {
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair ">{title}</p>
+        <p className="text-2xl font-playfair ">
+          {language === true ? title : titolo}
+        </p>
         <p className="mt-3 xs:text-xs font-serif">{description}</p>
         <a
           href={link}
@@ -54,6 +56,7 @@ const Projects = ({ language }) => {
   const projectData = [
     {
       title: "M.V.S.sport",
+      titolo: "M.V.S.sport",
       description1:
         "Sports website that allows you to book fields and join other users' reservations. Project created in Java and React Typescript.",
       description2:
@@ -63,6 +66,7 @@ const Projects = ({ language }) => {
     },
     {
       title: "Linkedin Clone",
+      titolo: "Clone Linkedin ",
       description1:
         "Clone of the popular site Linkedin with all the sections home, profile, job search, and the ability to post, comment, and like. Frontend project created with React TypeScript.",
       description2:
@@ -72,6 +76,7 @@ const Projects = ({ language }) => {
     },
     {
       title: "Spotify Clone",
+      titolo: "Clone Spotify ",
       description1:
         "Clone of the popular site Spotify with the ability to search for songs by genre, artist, or title and save them as favorites. Frontend project created with JavaScript.",
       description2:
@@ -81,6 +86,7 @@ const Projects = ({ language }) => {
     },
     {
       title: "Netflix Clone",
+      titolo: "Clone Netflix ",
       description1:
         "Clone of the popular site Netflix, with the ability to search for movies by artist and title. First frontend project created with React.",
       description2:
@@ -90,6 +96,7 @@ const Projects = ({ language }) => {
     },
     {
       title: "App Meteo",
+      titolo: "App Meteo",
       description1:
         "Weather application that allows you to see the atmospheric conditions of the preferred location. Frontend project created with React.",
       description2:
@@ -99,6 +106,7 @@ const Projects = ({ language }) => {
     },
     {
       title: "Epicode clone",
+      titolo: "Clone Epicode ",
       description1:
         "Clone of the Epicode website, where you can take a multiple-choice quiz with the ability to view the results. First project developed entirely in JavaScript.",
       description2:
@@ -107,9 +115,13 @@ const Projects = ({ language }) => {
       image: image6,
     },
     {
-      title: "GitHub",
-      description1: "GitHub June 2023 Statistics",
-      description2: "Statistiche Giugno 2023 GitHub",
+      title: "Personal blog",
+      titolo: "Blog personale ",
+      description1:
+        "Personal blog where I share my experiences, skills, and passions as a full stack developer and more.",
+      description2:
+        "Blog personale in cui condivido le mie esperienze, competenze e passioni come sviluppatore full stack e non solo.",
+      link: "https://github.com/bebob94/personal_blog",
       image: image7,
     },
   ];
@@ -173,6 +185,7 @@ const Projects = ({ language }) => {
             <Project
               key={project.title}
               title={project.title}
+              titolo={project.titolo}
               language={language}
               description={
                 language === true ? project.description1 : project.description2
